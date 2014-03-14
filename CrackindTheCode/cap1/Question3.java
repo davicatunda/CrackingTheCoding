@@ -1,6 +1,7 @@
 package cap1;
 
 public class Question3 {
+	//this method checks a string is a permutation of another.
 	public boolean isPermutation(String str1, String str2){
 		if(str1.length()!=str2.length()) return false;
 
