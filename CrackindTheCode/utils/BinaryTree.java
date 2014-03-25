@@ -33,30 +33,41 @@ public class BinaryTree<T> {
 			BinaryTreeNode<T> runner= queue.dequeue();
 			System.out.print(runner);
 			if(runner.value==value) return true;
-			if(runner.left!=null) queue.enqueue(runner.left);
-			if(runner.right!=null) queue.enqueue(runner.right);
+			System.out.print("(");
+			if(runner.left!=null){
+				queue.enqueue(runner.left);
+				System.out.print(runner.left.value);
+			} else System.out.print("x");
+			System.out.print(", ");
+			if(runner.right!=null){
+				queue.enqueue(runner.right);
+				System.out.print(runner.right.value);
+			} else System.out.print("x");
+			System.out.println(")");
 		}
+		System.out.println("FIM");
 		return false;
 	}
 
 	//method to find the next in-order Node
-	public BinaryTreeNode<T> nextInOrderNode(BinaryTreeNode<T> node){
-		if(node.right!=null){
-			BinaryTreeNode<T> runner = node.right;
-			while(runner.left!=null){
-				runner = runner.left;
-			}
-			return runner;
-		} else{
-			BinaryTreeNode<T> old = node;
-			BinaryTreeNode<T> runner = node;
-			while(old==runner.right){
-				if(old.parent!=null){
-					old=runner;
-					runner=runner.parent;
-				}
-			}
-			return runner;
-		}
-	}
+//	public BinaryTreeNode<T> nextInOrderNode(BinaryTreeNode<T> node){
+//		if(node.right!=null){
+//			BinaryTreeNode<T> runner = node.right;
+//			while(runner.left!=null){
+//				runner = runner.left;
+//			}
+//			return runner;
+//		} else{
+//			BinaryTreeNode<T> old = node;
+//			BinaryTreeNode<T> runner = node;
+//			while(old==runner.right){
+//				if(old.parent!=null){
+//					old=runner;
+//					runner=runner.parent;
+//				}
+//			}
+//			return runner;
+//		}
+//	}
+	
 }

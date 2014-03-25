@@ -9,6 +9,11 @@ public class BinaryTreeNode<T> {
 		this.left=left;
 		this.right=right;
 	}
+	
+	public BinaryTreeNode(T value){
+		this.value=value;
+	}
+	
 	public String toString(){
 		return value+" ";
 	}
