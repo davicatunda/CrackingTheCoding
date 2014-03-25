@@ -1,7 +1,7 @@
 package cap1;
 public class Question5 {
 
-	//this method change aaabbcccc for a3b2c4 if the generate str is smaller than the oldestz
+	//this method change 'aaabbcccc' for 'a3b2c4' if the generate str is smaller than the oldest
 	public String compressor(String str){
 
 		StringBuffer compressedStr = new StringBuffer ();
