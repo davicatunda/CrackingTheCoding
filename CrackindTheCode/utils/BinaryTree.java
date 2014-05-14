@@ -1,7 +1,7 @@
 package utils;
 
 public class BinaryTree<T> {
-	BinaryTreeNode<T> root;
+	public BinaryTreeNode<T> root;
 	T searchValue;
 	
 	public BinaryTree(BinaryTreeNode<T> root){

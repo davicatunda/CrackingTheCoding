@@ -31,6 +31,11 @@ public class BinarySearchTree extends BinaryTree<Integer>{
 	public boolean remove (int value, BinaryTreeNode<Integer> head){
 		//if sub-tree is empty
 		if(head==null) return false;
+		
+		if(head.value==value){
+			if(root.value==value) root=null;
+			return remove(value, root);
+		}
 		BinaryTreeNode<Integer> runner = head, parent= head;
 
 		//walk until reach node to be removed
@@ -48,6 +53,8 @@ public class BinarySearchTree extends BinaryTree<Integer>{
 				else return false;
 		}
 		
+		
+			
 		int r = findSmallest(runner);
 		
 		//has 2 children
