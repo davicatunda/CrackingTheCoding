@@ -1,5 +1,6 @@
 package cap02;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -21,8 +22,7 @@ public class Question4 {
 
 	public static void main(String[] args) {
 		LinkedList<Integer> list = new LinkedList<Integer> ();
-		list.add(1);list.add(9);list.add(3);list.add(15);list.add(4);
-		list.add(-2);list.add(10);list.add(10);list.add(0);
+		list.addAll(Arrays.asList(1,9,3,15,4,-2,10,10,0));
 		partition(10,list);
 	}
 

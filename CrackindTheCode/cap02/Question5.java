@@ -1,5 +1,6 @@
 package cap02;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -43,16 +44,8 @@ public class Question5 {
 	public static void main(String[] args) {
 		LinkedList<Integer> op1 = new LinkedList<Integer>();
 		LinkedList<Integer> op2 = new LinkedList<Integer>();
-		op1.add(1);
-		op1.add(1);
-		op1.add(9);
-		op1.add(1);
-		op1.add(2);
-		op1.add(8);
-		op2.add(2);
-		op2.add(1);
-		op2.add(1);
-		op2.add(9);
+		op1.addAll(Arrays.asList(1,1,9,1,8));
+		op2.addAll(Arrays.asList(2,1,1,9));
 		System.out.println(op1);
 		System.out.println(op2);
 		System.out.println(add(op1, op2));

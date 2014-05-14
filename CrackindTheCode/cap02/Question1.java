@@ -1,5 +1,6 @@
 package cap02;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -34,12 +35,7 @@ public class Question1 {
 
 	public static void main(String args[]) {
 		LinkedList<Integer> list = new LinkedList<Integer>();
-		list.add(1);
-		list.add(1);
-		list.add(3);
-		list.add(2);
-		list.add(4);
-		list.add(1);
+		list.addAll(Arrays.asList(1,1,3,2,4,1));
 		System.out.println(list);
 		removeDuplicates(list);
 		System.out.println(list);
