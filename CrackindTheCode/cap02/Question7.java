@@ -1,17 +1,18 @@
 package cap02;
 
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Stack;
+import java.util.List;
 
 public class Question7 {
-	static boolean isPalindrome(LinkedList<Integer> list) {
+	static boolean isPalindrome(List<Integer> list) {
 		if (list == null)
 			return false;
 		Iterator<Integer> it = list.iterator();
 		
-		Stack<Integer> stack = new Stack<Integer>();
+		Deque<Integer> stack = new LinkedList<Integer>();
 		int n = list.size();
 
 		// 1-2-3-2-1, n = 5 - 2
@@ -29,7 +30,7 @@ public class Question7 {
 	}
 
 	public static void main(String[] args) {
-		LinkedList<Integer> list = new LinkedList<Integer>();
+		List<Integer> list = new LinkedList<Integer>();
 		list.addAll(Arrays.asList(1,2,3,2,1));
 		System.out.println(isPalindrome(list));
 

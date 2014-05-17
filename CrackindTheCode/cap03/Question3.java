@@ -9,18 +9,18 @@ class SetOfStacks {
 
 	void push() {
 		if (!stacks.isEmpty()) {
-			if (stacks.pollLast().size() == threshold) {
+			if (stacks.remove().size() == threshold) {
 				stacks.push(new Stack<String>());
 			}
-			stacks.pollLast().push("plate");
+			stacks.remove().push("plate");
 		} else {
 			stacks.push(new Stack<String>());
-			stacks.pollLast().push("plate");
+			stacks.remove().push("plate");
 		}
 	}
 
 	void pull() {
-		if (stacks.pollLast().size() == 0)
+		if (stacks.remove().size() == 0)
 			stacks.pop();
 
 		if (!stacks.isEmpty())

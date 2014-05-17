@@ -1,6 +1,7 @@
 package cap01;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Question3 {
 	/*
@@ -35,8 +36,8 @@ public class Question3 {
 		//check if the 2 Strings have the same length
 		if(lenght!=str2.length()) return false;
 		
-		HashMap<Character, Integer> map1 = new HashMap<Character, Integer>();
-		HashMap<Character, Integer> map2 = new HashMap<Character, Integer>();
+		Map<Character, Integer> map1 = new HashMap<Character, Integer>();
+		Map<Character, Integer> map2 = new HashMap<Character, Integer>();
 		
 		for(int i=0;i<lenght;i++){
 			Character c1=str1.charAt(i), c2=str2.charAt(i);

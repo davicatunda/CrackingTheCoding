@@ -1,6 +1,7 @@
 package cap01;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class Question1 {
 	/* 
@@ -8,7 +9,7 @@ public class Question1 {
 	 * false otherwise
 	 */
 	public boolean hasAllUniqueChar(String str){
-		HashSet<Character> set = new HashSet<Character>();
+		Set<Character> set = new HashSet<Character>();
 		for(int i=0;i<str.length();i++){
 			if(!set.add(str.charAt(i))) return false;
 		}

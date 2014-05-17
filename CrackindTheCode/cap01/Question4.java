@@ -2,7 +2,7 @@ package cap01;
 
 public class Question4 {
 	/*
-	 * Otimizando o tempo.
+	 * Improving time
 	 */
 	public String replaceSpaces( Character[] sentence, Integer n){
 		StringBuffer str = new StringBuffer();
@@ -15,7 +15,7 @@ public class Question4 {
 	}
 	
 	/*
-	 * Otimizando a memória
+	 * Improving memory
 	 */
 	public Character[] replaceSpaces2(Character[] sentence, Integer n){
 		int numberOfSpaces=0;

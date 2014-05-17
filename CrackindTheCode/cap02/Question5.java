@@ -3,12 +3,13 @@ package cap02;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Question5 {
 
-	static LinkedList<Integer> add(LinkedList<Integer> op1,
-			LinkedList<Integer> op2) {
-		LinkedList<Integer> resp = new LinkedList<Integer>();
+	static List<Integer> add(List<Integer> op1,
+			List<Integer> op2) {
+		List<Integer> resp = new LinkedList<Integer>();
 		Iterator<Integer> top;
 		Iterator<Integer> down;
 		if (op1.size() > op2.size()) {
@@ -42,8 +43,8 @@ public class Question5 {
 	}
 
 	public static void main(String[] args) {
-		LinkedList<Integer> op1 = new LinkedList<Integer>();
-		LinkedList<Integer> op2 = new LinkedList<Integer>();
+		List<Integer> op1 = new LinkedList<Integer>();
+		List<Integer> op2 = new LinkedList<Integer>();
 		op1.addAll(Arrays.asList(1,1,9,1,8));
 		op2.addAll(Arrays.asList(2,1,1,9));
 		System.out.println(op1);
