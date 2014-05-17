@@ -1,7 +1,7 @@
 package utils;
 
 public class LinkedList<T> {
-	Node<T> header=null;
+	public Node<T> header=null;
 	
 	public void appendToHead(T value){
 		Node<T> start = new Node<T>(value);
@@ -16,6 +16,19 @@ public class LinkedList<T> {
 		else header = end;
 		
 		runner.next=end;
+	}
+	public Node<T> getTail(){
+		Node<T> runner = header;
+		if(runner!=null)	while(runner.next!=null)	runner=runner.next;
+		return runner;
+	}
+	public Node<T> getN(int n){
+		Node<T> runner = header;
+		for(int i=1;i<n;i++){
+			if(runner==null) return null;
+			else runner=runner.next;
+		}
+		return runner;
 	}
 	
 	public boolean appendToN(T value, int n){
